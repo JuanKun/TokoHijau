@@ -10,7 +10,22 @@ import SwiftUI
 
 struct StoreCardView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Rectangle().fill(Color(lightGrayTokped)).frame(width: screenWidth*0.9, height: screenHeight*0.25).cornerRadius(10)
+            
+            HStack{
+                Image("toy").frame(width: 40, height: 40).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                VStack{
+                   Text("Hello")
+                }.frame(width: screenWidth*0.5)
+                
+                Button(action: {
+                    
+                }){
+                    Text("Lihat Toko")
+                }
+            }
+        }
     }
 }
 
